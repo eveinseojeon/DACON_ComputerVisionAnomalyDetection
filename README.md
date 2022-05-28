@@ -16,9 +16,9 @@ MVtec AD Dataset에는 15 종류의 사물이 존재하며, 사물의 상태(정
 
 ### ✔ 수행 방법
 
-1. Model Ensemble을 이용하여 사물의 종류와 상태가 88개를 분류하는 모델을 만들 예정이다.
-2. Train 이상치 사진 개수가 적으므로 오버샘플링을 해준다.
-3. EfficientNet과 ResNet-50, VGG19, DenseNet121 4개의 모델을 각각 학습시킨 뒤 앙상블한다.
+1. Train 데이터를 확인했을 때 정상에 비하여 이상치가 현저히 적으므로 이상치를 오버샘플링해준다.
+2. Test 데이터를 잘 맞추기 위해 rotation, zoom, flip 등의 augmentation 작업을 해준다. 
+3. 사물의 종류와 상태 88개로 분류하는 모델 4개(EfficientNetB3, ResNet50V2, VGG19, DenseNet121)를 각각 학습시킨 뒤 앙상블한다.
 4. 결과값을 확인하며 미흡한 점을 수정해 나간다.
 
 
